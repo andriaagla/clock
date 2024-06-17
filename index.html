@@ -1,0 +1,58 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analogue Clock</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="light">
+    <div class="toggle fas fa-2x fa-moon" onclick="toggleTheme()"></div>
+    <div class="container">
+      <div id="outerBorder">
+        <div id="clock">
+          <div id="hoursNeedle"></div>
+          <div id="minutesNeedle"></div>
+          <div id="secondsNeedle"></div>
+          <div id="clockCenter"></div>
+
+          <div id="one">1</div>
+          <div id="two">2</div>
+          <div id="three">3</div>
+          <div id="four">4</div>
+          <div id="five">5</div>
+          <div id="six">6</div>
+          <div id="seven">7</div>
+          <div id="eigth">8</div>
+          <div id="nine">9</div>
+          <div id="ten">10</div>
+          <div id="eleven">11</div>
+          <div id="twelve">12</div>
+        </div>
+      </div>
+    </div>
+    <div class="clock">
+      <h1 class="time">08:37</h1>
+      <div class="details">
+          <h3 class="ampm">PM</h3>
+          <h3 class="sec">20</h3>
+      </div>
+      <h2 class="date">
+          <span class="month">Mar</span>,
+          <span class="dayofweek">Sunday</span>
+          <span class="day">6</span>
+      </h2>
+  </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+      .light {
+        --bgcolor: skyBlue;
+        --obcolor: rgb(120, 120, 120);
+        --needlecolor: rgb(60, 60, 60);
+        --numcolor: rgb(30, 30, 30);
+        --clockcolor: white;
+      }
+
+      .dark {
+        --bgcolor: rgb(20, 20, 40);
+        --obcolor: rgb(40, 40, 40);
+        --needlecolor: black;
+        --numcolor: rgb(160, 160, 160);
+        --clockcolor: rgb(80, 80, 100);
+      }
+
+      body {
+        background-color: var(--bgcolor);
+      }
+
+      .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+      }
+
+      .toggle {
+        position: absolute;
+        top: 2vmin;
+        right: 2vmin;
+        width: 5vmin;
+        height: 5vmin;
+        border-radius: 20%;
+        border: 0.6vmin solid var(--needlecolor);
+        background-color: var(--obcolor);
+        color: var(--numcolor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+      }
+
+      #outerBorder {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 80vmin;
+        height: 80vmin;
+        border-radius: 50%;
+        border: 0.6vmin solid var(--needlecolor);
+        background-color: var(--obcolor);
+        color: var(--numcolor);
+        font-family: "Ubuntu";
+        font-size: 6vmin;
+        z-index: 2;
+      }
+
+      #clock {
+        position: absolute;
+        width: 60vmin;
+        height: 60vmin;
+        border-radius: 50%;
+        border: 0.6vmin solid var(--needlecolor);
+        background-color: var(--clockcolor);
+        z-index: 2;
+      }
+
+      #hoursNeedle {
+        position: absolute;
+        top: calc(50% - 20vmin);
+        left: calc(50% - 0.4vmin);
+        width: 0.9vmin;
+        height: 20vmin;
+        background-color: var(--needlecolor);
+        transform-origin: 50% 100%;
+        z-index: 3;
+        transform: rotate(60deg);
+      }
+
+      #minutesNeedle {
+        position: absolute;
+        top: calc(50% - 25vmin);
+        left: calc(50% - 0.3vmin);
+        width: 0.6vmin;
+        height: 25vmin;
+        background-color: var(--needlecolor);
+        transform-origin: 50% 100%;
+        z-index: 4;
+        transform: rotate(180deg);
+      }
+
+      #secondsNeedle {
+        position: absolute;
+        top: calc(50% - 30vmin);
+        left: calc(50% - 0.15vmin);
+        width: 0.3vmin;
+        height: 30vmin;
+        background-color: var(--needlecolor);
+        transform-origin: 50% 100%;
+        z-index: 5;
+      }
+
+      #clockCenter {
+        position: absolute;
+        top: calc(50% - 0.6vmin);
+        left: calc(50% - 0.6vmin);
+        width: 1.2vmin;
+        height: 1.2vmin;
+        border-radius: 50%;
+        background-color: var(--needlecolor);
+        z-index: 6;
+      }
+
+      #one {
+        position: absolute;
+        top: -4vmin;
+        left: 45vmin;
+      }
+
+      #two {
+        position: absolute;
+        top: 9vmin;
+        left: 59vmin;
+      }
+
+      #three {
+        position: absolute;
+        top: calc(50% - 3vmin);
+        left: calc(100% + 3vmin);
+      }
+
+      #four {
+        position: absolute;
+        top: 44vmin;
+        left: 58vmin;
+      }
+
+      #five {
+        position: absolute;
+        top: 57vmin;
+        left: 46vmin;
+      }
+
+      #six {
+        position: absolute;
+        top: calc(100% + 1.5vmin);
+        left: calc(50% - 1.5vmin);
+      }
+
+      #seven {
+        position: absolute;
+        top: 57vmin;
+        left: 11vmin;
+      }
+
+      #eigth {
+        position: absolute;
+        top: 44vmin;
+        left: -2vmin;
+      }
+
+      #nine {
+        position: absolute;
+        top: calc(50% - 3vmin);
+        left: -6vmin;
+      }
+
+      #ten {
+        position: absolute;
+        top: 9vmin;
+        left: -4vmin;
+      }
+
+      #eleven {
+        position: absolute;
+        top: -4vmin;
+        left: 9vmin;
+      }
+
+      #twelve {
+        position: absolute;
+        top: -9vmin;
+        left: calc(50% - 3.5vmin);
+      }
+     
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .clock{
+        padding: 2em 3em;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: #222254;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        position: relative;
+        padding-bottom: 5em;
+    }
+    
+    .details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    .time{
+        font-size: 4em;
+    }
+    
+    .date{
+        font-weight: 400;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+    }
+    
+    /* Media Queries */
+    
+    @media screen and (min-width: 1000px) {
+        .time{
+            font-size: 6em;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        .clock{
+            font-size: 13px;
+        }
+    }
